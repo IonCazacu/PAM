@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:textSize="10pt"
+        android:text="Enter a number in each control below, then press a button"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:fontFamily="serif"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/info">
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="3pt"
+        android:orientation="horizontal">
+        <EditText android:id="@+id/etNum1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="5pt"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:inputType="numberDecimal">
+        </EditText>
+        <EditText android:id="@+id/etNum2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="5pt"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:inputType="numberDecimal">
+        </EditText>
+        <EditText android:id="@+id/etNum3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="5pt"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_marginBottom="15dp"
+            android:inputType="numberDecimal">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_marginTop="3pt"
+        android:layout_marginLeft="5pt"
+        android:layout_marginRight="5pt"
+        android:layout_marginBottom="15dp">
+        <Button android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="8pt"
+            android:id="@+id/btnAdd">
+        </Button>
+        <Button android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="8pt"
+            android:id="@+id/btnSub">
+        </Button>
+        <Button android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="*"
+            android:textSize="8pt"
+            android:id="@+id/btnMult">
+        </Button>
+        <Button android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="/"
+            android:textSize="8pt"
+            android:id="@+id/btnDiv">
+        </Button>
+    </LinearLayout>
+    <TextView
+        android:text="@string/Result"
+        android:layout_width="match_parent"
+        android:id="@+id/resultText"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:fontFamily="serif"
+        android:textSize="30sp">
+    </TextView>
+    <EditText android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5pt"
+        android:layout_marginRight="5pt"
+        android:text="0.0"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:id="@+id/tvResult"
+        android:gravity="center_horizontal">
+    </EditText>
+</LinearLayout>
