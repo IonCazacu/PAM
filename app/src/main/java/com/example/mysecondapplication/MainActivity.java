@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,14 +31,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         tv = (TextView) findViewById(R.id.textView2);
         tv.setText("Salut IA");
+        tv.setMovementMethod(new ScrollingMovementMethod());
+
         WriteIntern();
         ReadIntern();
         checkExternalMedia();
         checkExternalMedia();
         writeToSDFile();
-        readSDFile();
+        readSDFile("SALE.txt");
+        readSDFile("PRODUCT.txt");
+        readSDFile("CATEGORY.txt");
 
     }
 
@@ -143,12 +149,13 @@ public class MainActivity extends AppCompatActivity {
         tv.append("\n\nFile written to:\n" + file);
     }
 
-    public void readSDFile() { // read from SD card file data in the text box
+    public void readSDFile(String FileName) { // read from SD card file data in the text box
         String aDataRow = "";
         String aBuffer = "";
         String[] ss;
 
-        FileN = "SALE.txt";
+        //FileN = "SALE.txt";
+        FileN = FileName;
 
         try {
             File myFile = new
